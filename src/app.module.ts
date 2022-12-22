@@ -6,9 +6,10 @@ import { typeOrmConfig } from '../orm.config';
 import { UserModule } from './user/user.module';
 import { UserService } from './user/user.service';
 import { UserController } from './user/user.controller';
+import { CategoryModule } from './category/category.module';
 
 @Module({
-  imports: [TypeOrmModule.forRoot(typeOrmConfig), UserModule],
+  imports: [TypeOrmModule.forRoot(typeOrmConfig), UserModule, CategoryModule],
   controllers: [AppController, UserController],
   providers: [AppService, UserService],
 })
